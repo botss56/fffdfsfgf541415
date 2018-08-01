@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 
 
-var prefix = "="
+var prefix = "1"
 client.on('message', message => {
   if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
