@@ -12,8 +12,36 @@ client.on('ready', () => {
 }); 
 
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
+╔╦╦╦═╦╗╔═╦═╦══╦═╗
+║║║║╩╣╚╣═╣║║║║║╩╣
+╚══╩═╩═╩═╩═╩╩╩╩═╝ 
+
+افخم سيرفر يعطيك حساب فل اكسس:scream: :scream: :scream: 
 
 
+[ https://discord.gg/2QuNSeU ] 
+
+
+ الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+**`) 
+}).catch(console.error)
+})
+
+client.on('message', message => {
+if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('+++bc')){
+if(!message.author.id === '354527650657861633') return;
+message.channel.sendMessage('جار ارسال الرسالة')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
 
 var prefix = "1"
 client.on('message', message => {
