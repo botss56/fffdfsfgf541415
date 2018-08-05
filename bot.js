@@ -12,24 +12,7 @@ client.on('ready', () => {
 }); 
 
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-╔╦╦╦═╦╗╔═╦═╦══╦═╗
-║║║║╩╣╚╣═╣║║║║║╩╣
-╚══╩═╩═╩═╩═╩╩╩╩═╝ 
 
-افخم سيرفر يعطيك حساب فل اكسس:scream: :scream: :scream: 
-
-
-[ https://discord.gg/2QuNSeU ] 
-
-
- الدعووة خاصة لك ي قلبي ... [ ${member}  ]
-**`) 
-}).catch(console.error)
-})
 
 client.on('message', message => {
 if(!message.channel.guild) return;
